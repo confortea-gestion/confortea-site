@@ -1,16 +1,112 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="CONFORTEA | Gestion locative courte et moyenne durée"
+  description="Opérateur local de gestion locative courte et moyenne durée à Strasbourg et en Alsace"
+>
+
+<section class="hero">
+  <div>
+    <span class="kicker">STRASBOURG · EUROMÉTROPOLE · BAS-RHIN</span>
+
+    <h1>Gestion locative courte &amp; moyenne et longue durée</h1>
+
+    <p class="lead">
+      Une gestion complète, conforme et performante,
+      incluant les services de conciergerie nécessaires à l’excellence de l’accueil,
+      pensée pour protéger votre bien, votre image et vos revenus.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="/contact">Demander un audit gratuit</a>
+      <a class="btn secondary" href="/services">Voir les services</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+  <img src="/images/hero-ia.jpg" alt="Séjour d’un logement meublé géré par CONFORTEA" />
+</div>
+
+</section>
+
+
+
+<hr />
+
+<section>
+  <h2>Un contexte qui évolue, des exigences qui augmentent</h2>
+
+  <p>
+    La location courte durée a profondément évolué. La réglementation s’est renforcée,
+    les exigences opérationnelles et qualitatives ont augmenté.
+  </p>
+
+  <p>
+    Dans ce contexte, l’improvisation n’est plus une option.
+    CONFORTEA se positionne comme un <strong>opérateur local</strong> capable
+    de piloter votre activité avec méthode, conformité et sérénité.
+  </p>
+</section>
+
+<hr />
+
+<section class="audiences">
+  <h2>Vous êtes…</h2>
+
+  <div class="audiences-grid">
+    <article class="audience-card">
+      <h3>Un acteur professionnel de l’immobilier</h3>
+      <p>Promoteur, agence, investisseur structuré, marchand de biens, foncière. Vous recherchez un opérateur local fiable, capable de déployer une gestion de logements meublés homogène et conforme.</p>
+      <a class="link-cta" href="/solutions#pros">Découvrir nos solutions pour professionnels →</a>
+    </article>
+
+    <article class="audience-card">
+      <h3>Un propriétaire particulier</h3>
+      <p>Vous souhaitez optimiser les revenus de votre logement meublé, gagner du temps et sécuriser votre activité, sans improvisation ni zones grises (conformité, qualité, suivi).</p>
+      <a class="link-cta" href="/solutions#particuliers">Découvrir nos solutions pour propriétaires →</a>
+    </article>
+  </div>
+</section>
+
+
+<hr />
+
+<section>
+  <h2>Une gestion structurée, orientée résultats</h2>
+  <ul>
+    <li>Gestion locative courte durée</li>
+    <li>Gestion moyenne durée et mobilité</li>
+	<li>Gestion longue durée</li>
+    <li>Mise en conformité réglementaire</li>
+    <li>Optimisation des revenus locatifs</li>
+    <li>Coordination des prestations opérationnelles</li>
+    <li>Pilotage et suivi de performance</li>
+  </ul>
+
+  <p>
+    <strong>Notre priorité :</strong> la rentabilité durable de votre bien,
+    dans un cadre maîtrisé.
+  </p>
+</section>
+
+<section class="proof">
+  <h2>Un opérateur local, structuré et responsable</h2>
+
+  <ul class="proof-list">
+    <li>✔ Opérateur local basé à Strasbourg</li>
+    <li>✔ Gestion conforme aux règles locales et nationales</li>
+    <li>✔ Logements meublés, courte, moyenne et longue durée</li>
+    <li>✔ Suivi, reporting et pilotage de la performance</li>
+  </ul>
+
+  <p class="proof-note">
+    CONFORTEA n’est pas une plateforme automatisée.  
+    C’est un opérateur humain, structuré, responsable.
+  </p>
+</section>
+
+
+</BaseLayout>
+

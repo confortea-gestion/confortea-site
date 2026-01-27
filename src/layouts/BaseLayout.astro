@@ -1,0 +1,61 @@
+---
+import "../Styles/global.css";
+const { title = "CONFORTEA", description = "" } = Astro.props;
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="/">
+          <img
+            src="/images/logo-confortea.jpg"
+            alt="Logo CONFORTEA"
+            class="brand-logo"
+          />
+          <span class="brand-name">CONFORTEA</span>
+        </a>
+
+        <nav class="links" aria-label="Navigation principale">
+          <a href="/">Accueil</a>
+          <a href="/services">Services</a>
+          <a href="/solutions">Solutions</a>
+          <a href="/reglementation">Réglementation</a>
+          <a href="/a-propos">À propos</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer>
+  <div class="container footer">
+    <div class="footer-copy">
+      © {new Date().getFullYear()} CONFORTEA
+      <img
+        src="/images/logo-confortea.jpg"
+        alt=""
+        class="footer-logo-inline"
+        aria-hidden="true"
+      />
+      — Strasbourg & Bas-Rhin
+    </div>
+
+    <div class="footer-links">
+      <a href="/mentions-legales">Mentions légales</a>
+      ·
+      <a href="/confidentialite">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

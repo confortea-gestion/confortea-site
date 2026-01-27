@@ -1,0 +1,184 @@
+:root{
+  --bg:#f6f7f9;
+  --panel:#ffffff;
+  --text:#0b1220;
+  --muted:#4b5563;
+  --line:#e5e7eb;
+
+  --accent:#0f2a43;   /* bleu profond prestige */
+  --accent2:#0ea5e9;  /* bleu clair */
+  --radius:18px;
+  --max:1120px;
+
+  --shadow: 0 10px 30px rgba(15, 23, 42, .08);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:var(--text);
+  background: radial-gradient(1200px 520px at 50% 0%, #eef5ff 0%, var(--bg) 55%, var(--bg) 100%);
+  line-height:1.65;
+}
+
+a{color:inherit}
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+header{
+  position: sticky; top:0; z-index:20;
+  background: rgba(246,247,249,.86);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 0; gap:16px;
+}
+
+.brand{
+  display:flex; align-items:center; gap:10px;
+  font-weight:850; letter-spacing:.3px; text-decoration:none;
+}
+.brand-badge{
+  width:34px;height:34px;border-radius:12px;
+  background: linear-gradient(135deg, var(--accent), #1f4d7a);
+  box-shadow: var(--shadow);
+}
+
+.links{display:flex; flex-wrap:wrap; gap:4px}
+.links a{
+  text-decoration:none;
+  color:var(--muted);
+  padding:8px 10px;
+  border-radius:12px;
+}
+.links a:hover{background:#fff; color:var(--text); box-shadow:0 6px 18px rgba(15,23,42,.06)}
+
+main{padding:34px 0 70px}
+
+.hero{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap:18px;
+  padding:28px;
+  background: rgba(255,255,255,.80);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.kicker{
+  display:inline-flex; gap:10px; align-items:center;
+  font-size:12px; color:var(--muted);
+  padding:7px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+}
+
+h1{margin:14px 0 10px; font-size:42px; line-height:1.15}
+.lead{color:var(--muted); font-size:16px; margin:0 0 16px}
+
+.actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:11px 14px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:#fff;
+  text-decoration:none;
+  font-weight:650;
+}
+.btn.primary{
+  border-color: var(--accent);
+  background: var(--accent);
+  color:#fff;
+}
+.btn.secondary{
+  border-color: rgba(14,165,233,.35);
+  background: rgba(14,165,233,.08);
+  color: #0b4d66;
+}
+
+.hero-visual{
+  border-radius: var(--radius);
+  overflow:hidden;
+  border:1px solid var(--line);
+  background: linear-gradient(135deg, #0f2a43, #0ea5e9);
+  min-height: 240px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.hero-visual::after{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(420px 240px at 40% 20%, rgba(255,255,255,.18), transparent 60%);
+}
+
+.section{
+  margin-top:22px;
+  padding:22px;
+  background: rgba(255,255,255,.84);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(15,23,42,.05);
+}
+
+.section h2{margin:0 0 10px; font-size:22px}
+.section p, .section li{color:var(--muted)}
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  gap:14px;
+  margin-top:12px;
+}
+.card{
+  grid-column: span 6;
+  padding:18px;
+  border-radius: 16px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+.card h3{margin:0 0 8px}
+.card a{color: var(--accent); text-decoration:none; font-weight:650}
+.card a:hover{text-decoration:underline}
+
+footer{
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  padding:18px 0;
+  background: rgba(246,247,249,.92);
+}
+
+@media (max-width: 860px){
+  .hero{grid-template-columns: 1fr}
+  h1{font-size:34px}
+  .card{grid-column: span 12}
+}
+
+.site-header {
+  padding: 1rem 2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 32px;
+  width: auto;
+}
+
+.brand-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #111;
+  letter-spacing: 0.02em;
+}
