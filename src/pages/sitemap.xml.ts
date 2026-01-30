@@ -1,24 +1,22 @@
-import { getCollection } from "astro:content";
-
 export async function GET() {
   const pages = [
-    "",
-    "/services",
-    "/solutions",
-    "/solutions/particuliers",
-    "/solutions/professionnels",
-    "/contact",
-    "/a-propos",
-    "/mentions-legales",
-    "/confidentialite",
-    "/reglementation"
+    "https://confortea.net/",
+    "https://confortea.net/services",
+    "https://confortea.net/solutions",
+    "https://confortea.net/solutions/particuliers",
+    "https://confortea.net/solutions/professionnels",
+    "https://confortea.net/contact",
+    "https://confortea.net/a-propos",
+    "https://confortea.net/mentions-legales",
+    "https://confortea.net/confidentialite",
+    "https://confortea.net/reglementation",
   ];
 
   const urls = pages
     .map(
-      (path) => `
+      (url) => `
   <url>
-    <loc>https://confortea.net${path}</loc>
+    <loc>${url}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>`
@@ -32,7 +30,7 @@ ${urls}
 
   return new Response(xml, {
     headers: {
-      "Content-Type": "application/xml"
-    }
+      "Content-Type": "application/xml",
+    },
   });
 }
