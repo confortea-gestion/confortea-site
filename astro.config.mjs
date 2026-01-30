@@ -4,6 +4,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://confortea.net",
+  site: "https://www.confortea.net",
   integrations: [sitemap()],
 });
