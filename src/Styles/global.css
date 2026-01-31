@@ -96,6 +96,10 @@ main{padding:36px 0 70px}
   position: relative;
 }
 
+.hero h1 {
+  margin-bottom: 1.2rem; /* ajuste : 1rem, 1.5rem, 2rem */
+}
+
 .footer{
   display:flex;
   justify-content:space-between;
@@ -275,6 +279,16 @@ section{
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 24px;
+}
+
+.section-no-gap {
+  margin-top: 8px !important;   /* réduit le vide entre 2 sections */
+}
+
+.section-tight {
+  padding-top: 14px !important;  /* optionnel : réduit un peu l’intérieur en haut */
+  padding-bottom: 14px !important;
+  /* surtout ne touche pas padding-left/right */
 }
 
 .legal-footer {

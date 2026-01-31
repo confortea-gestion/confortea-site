@@ -1,15 +1,39 @@
+
 ---
 import "../Styles/global.css";
-const { title = "CONFORTEA", description = "" } = Astro.props;
+
+const {
+  title = "CONFORTEA",
+  description = "",
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString();
 ---
+
 <!doctype html>
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    <!-- SEO de base -->
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph (partage réseaux) -->
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+
+    <!-- (Optionnel) image de partage si tu en as une dédiée -->
+    <!-- <meta property="og:image" content="https://confortea.net/images/og.jpg" /> -->
   </head>
+
   <body>
     <header>
       <div class="container nav">
@@ -38,24 +62,25 @@ const { title = "CONFORTEA", description = "" } = Astro.props;
     </main>
 
     <footer>
-  <div class="container footer">
-    <div class="footer-copy">
-      © {new Date().getFullYear()} CONFORTEA
-      <img
-        src="/images/logo-confortea.jpg"
-        alt=""
-        class="footer-logo-inline"
-        aria-hidden="true"
-      />
-      — Strasbourg & Bas-Rhin
-    </div>
+      <div class="container footer">
+        <div class="footer-copy">
+          © {new Date().getFullYear()} CONFORTEA
+          <img
+            src="/images/logo-confortea.jpg"
+            alt=""
+            class="footer-logo-inline"
+            aria-hidden="true"
+          />
+          — Strasbourg · Eurométropole · Bas-Rhin
+        </div>
 
-    <div class="footer-links">
-      <a href="/mentions-legales">Mentions légales</a>
-      ·
-      <a href="/confidentialite">Politique de confidentialité</a>
-    </div>
-  </div>
-</footer>
+        <div class="footer-links">
+          <a href="/mentions-legales">Mentions légales</a>
+          ·
+          <a href="/confidentialite">Politique de confidentialité</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
+
