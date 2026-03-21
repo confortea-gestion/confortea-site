@@ -25,7 +25,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString(
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9MJSS7HRQ"></script>
-<script>
+<script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   
